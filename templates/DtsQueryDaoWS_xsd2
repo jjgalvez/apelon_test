@@ -1,0 +1,3998 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2-b13 (branches/2.2-6964; 2012-01-09T18:04:18+0000) JAXWS-RI/2.2.6-promoted-b20 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://apelon.com/dtsserver/ws/dtsquery" xmlns:ns2="http://jaxb.dev.java.net/array" xmlns:ns1="http://apelon.com/dtsserver/types" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://apelon.com/dtsserver/ws/dtsquery">
+
+<xs:import namespace="http://apelon.com/dtsserver/types" schemaLocation="http://localhost:5000/soap/DtsQueryDaoWS?xsd=3"/>
+
+<xs:import namespace="http://jaxb.dev.java.net/array" schemaLocation="http://localhost:5000/soap/DtsQueryDaoWS?xsd=1"/>
+
+<xs:element name="addAssociationType" type="tns:addAssociationType"/>
+
+<xs:element name="addAssociationTypeResponse" type="tns:addAssociationTypeResponse"/>
+
+<xs:element name="addAuthority" type="tns:addAuthority"/>
+
+<xs:element name="addAuthorityProperty" type="tns:addAuthorityProperty"/>
+
+<xs:element name="addAuthorityPropertyResponse" type="tns:addAuthorityPropertyResponse"/>
+
+<xs:element name="addAuthorityResponse" type="tns:addAuthorityResponse"/>
+
+<xs:element name="addConcept" type="tns:addConcept"/>
+
+<xs:element name="addConceptAssociation" type="tns:addConceptAssociation"/>
+
+<xs:element name="addConceptAssociationResponse" type="tns:addConceptAssociationResponse"/>
+
+<xs:element name="addConceptProperty" type="tns:addConceptProperty"/>
+
+<xs:element name="addConceptPropertyResponse" type="tns:addConceptPropertyResponse"/>
+
+<xs:element name="addConceptResponse" type="tns:addConceptResponse"/>
+
+<xs:element name="addDefiningConcept" type="tns:addDefiningConcept"/>
+
+<xs:element name="addDefiningConceptResponse" type="tns:addDefiningConceptResponse"/>
+
+<xs:element name="addDefiningRole" type="tns:addDefiningRole"/>
+
+<xs:element name="addDefiningRoleResponse" type="tns:addDefiningRoleResponse"/>
+
+<xs:element name="addNamespace" type="tns:addNamespace"/>
+
+<xs:element name="addNamespaceProperty" type="tns:addNamespaceProperty"/>
+
+<xs:element name="addNamespacePropertyResponse" type="tns:addNamespacePropertyResponse"/>
+
+<xs:element name="addNamespaceResponse" type="tns:addNamespaceResponse"/>
+
+<xs:element name="addPropertyType" type="tns:addPropertyType"/>
+
+<xs:element name="addPropertyTypeResponse" type="tns:addPropertyTypeResponse"/>
+
+<xs:element name="addQualifierType" type="tns:addQualifierType"/>
+
+<xs:element name="addQualifierTypeResponse" type="tns:addQualifierTypeResponse"/>
+
+<xs:element name="addRoleType" type="tns:addRoleType"/>
+
+<xs:element name="addRoleTypeResponse" type="tns:addRoleTypeResponse"/>
+
+<xs:element name="addRootConcept" type="tns:addRootConcept"/>
+
+<xs:element name="addRootConceptResponse" type="tns:addRootConceptResponse"/>
+
+<xs:element name="addSubset" type="tns:addSubset"/>
+
+<xs:element name="addSubsetProperty" type="tns:addSubsetProperty"/>
+
+<xs:element name="addSubsetPropertyResponse" type="tns:addSubsetPropertyResponse"/>
+
+<xs:element name="addSubsetResponse" type="tns:addSubsetResponse"/>
+
+<xs:element name="addSubsetVersion" type="tns:addSubsetVersion"/>
+
+<xs:element name="addSubsetVersionProperty" type="tns:addSubsetVersionProperty"/>
+
+<xs:element name="addSubsetVersionPropertyResponse" type="tns:addSubsetVersionPropertyResponse"/>
+
+<xs:element name="addSubsetVersionResponse" type="tns:addSubsetVersionResponse"/>
+
+<xs:element name="addSynonym" type="tns:addSynonym"/>
+
+<xs:element name="addSynonymResponse" type="tns:addSynonymResponse"/>
+
+<xs:element name="addTerm" type="tns:addTerm"/>
+
+<xs:element name="addTermAssociation" type="tns:addTermAssociation"/>
+
+<xs:element name="addTermAssociationResponse" type="tns:addTermAssociationResponse"/>
+
+<xs:element name="addTermProperty" type="tns:addTermProperty"/>
+
+<xs:element name="addTermPropertyResponse" type="tns:addTermPropertyResponse"/>
+
+<xs:element name="addTermResponse" type="tns:addTermResponse"/>
+
+<xs:element name="addVersion" type="tns:addVersion"/>
+
+<xs:element name="addVersionProperty" type="tns:addVersionProperty"/>
+
+<xs:element name="addVersionPropertyResponse" type="tns:addVersionPropertyResponse"/>
+
+<xs:element name="addVersionResponse" type="tns:addVersionResponse"/>
+
+<xs:element name="buildSubset" type="tns:buildSubset"/>
+
+<xs:element name="buildSubsetResponse" type="tns:buildSubsetResponse"/>
+
+<xs:element name="classify" type="tns:classify"/>
+
+<xs:element name="classifyResponse" type="tns:classifyResponse"/>
+
+<xs:element name="createNamespaceRevision" type="tns:createNamespaceRevision"/>
+
+<xs:element name="createNamespaceRevisionResponse" type="tns:createNamespaceRevisionResponse"/>
+
+<xs:element name="createRoleGroup" type="tns:createRoleGroup"/>
+
+<xs:element name="createRoleGroupResponse" type="tns:createRoleGroupResponse"/>
+
+<xs:element name="createSubsetRevision" type="tns:createSubsetRevision"/>
+
+<xs:element name="createSubsetRevisionResponse" type="tns:createSubsetRevisionResponse"/>
+
+<xs:element name="deleteAssociationType" type="tns:deleteAssociationType"/>
+
+<xs:element name="deleteAssociationTypeResponse" type="tns:deleteAssociationTypeResponse"/>
+
+<xs:element name="deleteAuthorityById" type="tns:deleteAuthorityById"/>
+
+<xs:element name="deleteAuthorityByIdResponse" type="tns:deleteAuthorityByIdResponse"/>
+
+<xs:element name="deleteAuthorityByName" type="tns:deleteAuthorityByName"/>
+
+<xs:element name="deleteAuthorityByNameResponse" type="tns:deleteAuthorityByNameResponse"/>
+
+<xs:element name="deleteAuthorityProperty" type="tns:deleteAuthorityProperty"/>
+
+<xs:element name="deleteAuthorityPropertyResponse" type="tns:deleteAuthorityPropertyResponse"/>
+
+<xs:element name="deleteConcept" type="tns:deleteConcept"/>
+
+<xs:element name="deleteConceptAssociation" type="tns:deleteConceptAssociation"/>
+
+<xs:element name="deleteConceptAssociationResponse" type="tns:deleteConceptAssociationResponse"/>
+
+<xs:element name="deleteConceptProperty" type="tns:deleteConceptProperty"/>
+
+<xs:element name="deleteConceptPropertyResponse" type="tns:deleteConceptPropertyResponse"/>
+
+<xs:element name="deleteConceptResponse" type="tns:deleteConceptResponse"/>
+
+<xs:element name="deleteDefiningConcept" type="tns:deleteDefiningConcept"/>
+
+<xs:element name="deleteDefiningConceptResponse" type="tns:deleteDefiningConceptResponse"/>
+
+<xs:element name="deleteDefiningRole" type="tns:deleteDefiningRole"/>
+
+<xs:element name="deleteDefiningRoleResponse" type="tns:deleteDefiningRoleResponse"/>
+
+<xs:element name="deleteNamespaceByCode" type="tns:deleteNamespaceByCode"/>
+
+<xs:element name="deleteNamespaceByCodeResponse" type="tns:deleteNamespaceByCodeResponse"/>
+
+<xs:element name="deleteNamespaceById" type="tns:deleteNamespaceById"/>
+
+<xs:element name="deleteNamespaceByIdResponse" type="tns:deleteNamespaceByIdResponse"/>
+
+<xs:element name="deleteNamespaceByName" type="tns:deleteNamespaceByName"/>
+
+<xs:element name="deleteNamespaceByNameResponse" type="tns:deleteNamespaceByNameResponse"/>
+
+<xs:element name="deleteNamespaceProperty" type="tns:deleteNamespaceProperty"/>
+
+<xs:element name="deleteNamespacePropertyResponse" type="tns:deleteNamespacePropertyResponse"/>
+
+<xs:element name="deletePropertyType" type="tns:deletePropertyType"/>
+
+<xs:element name="deletePropertyTypeResponse" type="tns:deletePropertyTypeResponse"/>
+
+<xs:element name="deleteQualifierType" type="tns:deleteQualifierType"/>
+
+<xs:element name="deleteQualifierTypeResponse" type="tns:deleteQualifierTypeResponse"/>
+
+<xs:element name="deleteRoleType" type="tns:deleteRoleType"/>
+
+<xs:element name="deleteRoleTypeResponse" type="tns:deleteRoleTypeResponse"/>
+
+<xs:element name="deleteRoleTypeWithReferences" type="tns:deleteRoleTypeWithReferences"/>
+
+<xs:element name="deleteRoleTypeWithReferencesResponse" type="tns:deleteRoleTypeWithReferencesResponse"/>
+
+<xs:element name="deleteRootConcept" type="tns:deleteRootConcept"/>
+
+<xs:element name="deleteRootConceptResponse" type="tns:deleteRootConceptResponse"/>
+
+<xs:element name="deleteSubset" type="tns:deleteSubset"/>
+
+<xs:element name="deleteSubsetProperty" type="tns:deleteSubsetProperty"/>
+
+<xs:element name="deleteSubsetPropertyResponse" type="tns:deleteSubsetPropertyResponse"/>
+
+<xs:element name="deleteSubsetResponse" type="tns:deleteSubsetResponse"/>
+
+<xs:element name="deleteSubsetVersionById" type="tns:deleteSubsetVersionById"/>
+
+<xs:element name="deleteSubsetVersionByIdResponse" type="tns:deleteSubsetVersionByIdResponse"/>
+
+<xs:element name="deleteSubsetVersionByName" type="tns:deleteSubsetVersionByName"/>
+
+<xs:element name="deleteSubsetVersionByNameResponse" type="tns:deleteSubsetVersionByNameResponse"/>
+
+<xs:element name="deleteSubsetVersionProperty" type="tns:deleteSubsetVersionProperty"/>
+
+<xs:element name="deleteSubsetVersionPropertyResponse" type="tns:deleteSubsetVersionPropertyResponse"/>
+
+<xs:element name="deleteSynonym" type="tns:deleteSynonym"/>
+
+<xs:element name="deleteSynonymResponse" type="tns:deleteSynonymResponse"/>
+
+<xs:element name="deleteSystemContextProperty" type="tns:deleteSystemContextProperty"/>
+
+<xs:element name="deleteSystemContextPropertyResponse" type="tns:deleteSystemContextPropertyResponse"/>
+
+<xs:element name="deleteTerm" type="tns:deleteTerm"/>
+
+<xs:element name="deleteTermAssociation" type="tns:deleteTermAssociation"/>
+
+<xs:element name="deleteTermAssociationResponse" type="tns:deleteTermAssociationResponse"/>
+
+<xs:element name="deleteTermProperty" type="tns:deleteTermProperty"/>
+
+<xs:element name="deleteTermPropertyResponse" type="tns:deleteTermPropertyResponse"/>
+
+<xs:element name="deleteTermResponse" type="tns:deleteTermResponse"/>
+
+<xs:element name="deleteUserContextProperty" type="tns:deleteUserContextProperty"/>
+
+<xs:element name="deleteUserContextPropertyResponse" type="tns:deleteUserContextPropertyResponse"/>
+
+<xs:element name="deleteVersionById" type="tns:deleteVersionById"/>
+
+<xs:element name="deleteVersionByIdResponse" type="tns:deleteVersionByIdResponse"/>
+
+<xs:element name="deleteVersionByName" type="tns:deleteVersionByName"/>
+
+<xs:element name="deleteVersionByNameResponse" type="tns:deleteVersionByNameResponse"/>
+
+<xs:element name="deleteVersionProperty" type="tns:deleteVersionProperty"/>
+
+<xs:element name="deleteVersionPropertyResponse" type="tns:deleteVersionPropertyResponse"/>
+
+<xs:element name="executeBatchSQLUpdate" type="tns:executeBatchSQLUpdate"/>
+
+<xs:element name="executeBatchSQLUpdateResponse" type="tns:executeBatchSQLUpdateResponse"/>
+
+<xs:element name="executeSQL" type="tns:executeSQL"/>
+
+<xs:element name="executeSQLQuery" type="tns:executeSQLQuery"/>
+
+<xs:element name="executeSQLQueryResponse" type="tns:executeSQLQueryResponse"/>
+
+<xs:element name="executeSQLResponse" type="tns:executeSQLResponse"/>
+
+<xs:element name="executeSQLUpdate" type="tns:executeSQLUpdate"/>
+
+<xs:element name="executeSQLUpdateResponse" type="tns:executeSQLUpdateResponse"/>
+
+<xs:element name="executeSQLUpdates" type="tns:executeSQLUpdates"/>
+
+<xs:element name="executeSQLUpdatesResponse" type="tns:executeSQLUpdatesResponse"/>
+
+<xs:element name="fetchAuthorityById" type="tns:fetchAuthorityById"/>
+
+<xs:element name="fetchAuthorityByIdResponse" type="tns:fetchAuthorityByIdResponse"/>
+
+<xs:element name="fetchAuthorityByName" type="tns:fetchAuthorityByName"/>
+
+<xs:element name="fetchAuthorityByNameResponse" type="tns:fetchAuthorityByNameResponse"/>
+
+<xs:element name="fetchConceptHistory" type="tns:fetchConceptHistory"/>
+
+<xs:element name="fetchConceptHistoryResponse" type="tns:fetchConceptHistoryResponse"/>
+
+<xs:element name="fetchConceptSubsets" type="tns:fetchConceptSubsets"/>
+
+<xs:element name="fetchConceptSubsetsResponse" type="tns:fetchConceptSubsetsResponse"/>
+
+<xs:element name="fetchParentReferences" type="tns:fetchParentReferences"/>
+
+<xs:element name="fetchParentReferencesResponse" type="tns:fetchParentReferencesResponse"/>
+
+<xs:element name="fetchRightIdentityReferences" type="tns:fetchRightIdentityReferences"/>
+
+<xs:element name="fetchRightIdentityReferencesResponse" type="tns:fetchRightIdentityReferencesResponse"/>
+
+<xs:element name="fetchSubsetConceptCount" type="tns:fetchSubsetConceptCount"/>
+
+<xs:element name="fetchSubsetConceptCountResponse" type="tns:fetchSubsetConceptCountResponse"/>
+
+<xs:element name="fetchSubsetConcepts" type="tns:fetchSubsetConcepts"/>
+
+<xs:element name="fetchSubsetConceptsResponse" type="tns:fetchSubsetConceptsResponse"/>
+
+<xs:element name="fetchSubsetNamespaces" type="tns:fetchSubsetNamespaces"/>
+
+<xs:element name="fetchSubsetNamespacesResponse" type="tns:fetchSubsetNamespacesResponse"/>
+
+<xs:element name="fetchSubsetPreview" type="tns:fetchSubsetPreview"/>
+
+<xs:element name="fetchSubsetPreviewResponse" type="tns:fetchSubsetPreviewResponse"/>
+
+<xs:element name="fetchTermHistory" type="tns:fetchTermHistory"/>
+
+<xs:element name="fetchTermHistoryResponse" type="tns:fetchTermHistoryResponse"/>
+
+<xs:element name="fetchTermProperties" type="tns:fetchTermProperties"/>
+
+<xs:element name="fetchTermPropertiesResponse" type="tns:fetchTermPropertiesResponse"/>
+
+<xs:element name="fetchVersionById" type="tns:fetchVersionById"/>
+
+<xs:element name="fetchVersionByIdResponse" type="tns:fetchVersionByIdResponse"/>
+
+<xs:element name="fetchVersionByName" type="tns:fetchVersionByName"/>
+
+<xs:element name="fetchVersionByNameResponse" type="tns:fetchVersionByNameResponse"/>
+
+<xs:element name="filterSubsetConcepts" type="tns:filterSubsetConcepts"/>
+
+<xs:element name="filterSubsetConceptsResponse" type="tns:filterSubsetConceptsResponse"/>
+
+<xs:element name="findAllSubsets" type="tns:findAllSubsets"/>
+
+<xs:element name="findAllSubsetsResponse" type="tns:findAllSubsetsResponse"/>
+
+<xs:element name="findAssociationTypeById" type="tns:findAssociationTypeById"/>
+
+<xs:element name="findAssociationTypeByIdResponse" type="tns:findAssociationTypeByIdResponse"/>
+
+<xs:element name="findAssociationTypeByName" type="tns:findAssociationTypeByName"/>
+
+<xs:element name="findAssociationTypeByNameResponse" type="tns:findAssociationTypeByNameResponse"/>
+
+<xs:element name="findAuthorityPropertyTypeById" type="tns:findAuthorityPropertyTypeById"/>
+
+<xs:element name="findAuthorityPropertyTypeByIdResponse" type="tns:findAuthorityPropertyTypeByIdResponse"/>
+
+<xs:element name="findAuthorityPropertyTypeByName" type="tns:findAuthorityPropertyTypeByName"/>
+
+<xs:element name="findAuthorityPropertyTypeByNameResponse" type="tns:findAuthorityPropertyTypeByNameResponse"/>
+
+<xs:element name="findAuthorityQualifierTypeById" type="tns:findAuthorityQualifierTypeById"/>
+
+<xs:element name="findAuthorityQualifierTypeByIdResponse" type="tns:findAuthorityQualifierTypeByIdResponse"/>
+
+<xs:element name="findAuthorityQualifierTypeByName" type="tns:findAuthorityQualifierTypeByName"/>
+
+<xs:element name="findAuthorityQualifierTypeByNameResponse" type="tns:findAuthorityQualifierTypeByNameResponse"/>
+
+<xs:element name="findConceptByCode" type="tns:findConceptByCode"/>
+
+<xs:element name="findConceptByCodeResponse" type="tns:findConceptByCodeResponse"/>
+
+<xs:element name="findConceptById" type="tns:findConceptById"/>
+
+<xs:element name="findConceptByIdResponse" type="tns:findConceptByIdResponse"/>
+
+<xs:element name="findConceptByName" type="tns:findConceptByName"/>
+
+<xs:element name="findConceptByNameResponse" type="tns:findConceptByNameResponse"/>
+
+<xs:element name="findConceptsWithAllSynonymMatching" type="tns:findConceptsWithAllSynonymMatching"/>
+
+<xs:element name="findConceptsWithAllSynonymMatchingResponse" type="tns:findConceptsWithAllSynonymMatchingResponse"/>
+
+<xs:element name="findConceptsWithAssociationQualifierMatching" type="tns:findConceptsWithAssociationQualifierMatching"/>
+
+<xs:element name="findConceptsWithAssociationQualifierMatchingResponse" type="tns:findConceptsWithAssociationQualifierMatchingResponse"/>
+
+<xs:element name="findConceptsWithConceptAssociationMatching" type="tns:findConceptsWithConceptAssociationMatching"/>
+
+<xs:element name="findConceptsWithConceptAssociationMatchingResponse" type="tns:findConceptsWithConceptAssociationMatchingResponse"/>
+
+<xs:element name="findConceptsWithInverseConceptAssociationMatching" type="tns:findConceptsWithInverseConceptAssociationMatching"/>
+
+<xs:element name="findConceptsWithInverseConceptAssociationMatchingResponse" type="tns:findConceptsWithInverseConceptAssociationMatchingResponse"/>
+
+<xs:element name="findConceptsWithInverseRoleMatching" type="tns:findConceptsWithInverseRoleMatching"/>
+
+<xs:element name="findConceptsWithInverseRoleMatchingResponse" type="tns:findConceptsWithInverseRoleMatchingResponse"/>
+
+<xs:element name="findConceptsWithNameMatching" type="tns:findConceptsWithNameMatching"/>
+
+<xs:element name="findConceptsWithNameMatchingResponse" type="tns:findConceptsWithNameMatchingResponse"/>
+
+<xs:element name="findConceptsWithPropertyMatching" type="tns:findConceptsWithPropertyMatching"/>
+
+<xs:element name="findConceptsWithPropertyMatchingResponse" type="tns:findConceptsWithPropertyMatchingResponse"/>
+
+<xs:element name="findConceptsWithPropertyQualifierMatching" type="tns:findConceptsWithPropertyQualifierMatching"/>
+
+<xs:element name="findConceptsWithPropertyQualifierMatchingResponse" type="tns:findConceptsWithPropertyQualifierMatchingResponse"/>
+
+<xs:element name="findConceptsWithRoleMatching" type="tns:findConceptsWithRoleMatching"/>
+
+<xs:element name="findConceptsWithRoleMatchingResponse" type="tns:findConceptsWithRoleMatchingResponse"/>
+
+<xs:element name="findConceptsWithSynonymMatching" type="tns:findConceptsWithSynonymMatching"/>
+
+<xs:element name="findConceptsWithSynonymMatchingResponse" type="tns:findConceptsWithSynonymMatchingResponse"/>
+
+<xs:element name="findNamespaceByCode" type="tns:findNamespaceByCode"/>
+
+<xs:element name="findNamespaceByCodeResponse" type="tns:findNamespaceByCodeResponse"/>
+
+<xs:element name="findNamespaceById" type="tns:findNamespaceById"/>
+
+<xs:element name="findNamespaceByIdResponse" type="tns:findNamespaceByIdResponse"/>
+
+<xs:element name="findNamespaceByName" type="tns:findNamespaceByName"/>
+
+<xs:element name="findNamespaceByNameResponse" type="tns:findNamespaceByNameResponse"/>
+
+<xs:element name="findPropertyTypeById" type="tns:findPropertyTypeById"/>
+
+<xs:element name="findPropertyTypeByIdResponse" type="tns:findPropertyTypeByIdResponse"/>
+
+<xs:element name="findPropertyTypeByName" type="tns:findPropertyTypeByName"/>
+
+<xs:element name="findPropertyTypeByNameResponse" type="tns:findPropertyTypeByNameResponse"/>
+
+<xs:element name="findQualifierTypeById" type="tns:findQualifierTypeById"/>
+
+<xs:element name="findQualifierTypeByIdResponse" type="tns:findQualifierTypeByIdResponse"/>
+
+<xs:element name="findQualifierTypeByName" type="tns:findQualifierTypeByName"/>
+
+<xs:element name="findQualifierTypeByNameResponse" type="tns:findQualifierTypeByNameResponse"/>
+
+<xs:element name="findRoleTypeByCode" type="tns:findRoleTypeByCode"/>
+
+<xs:element name="findRoleTypeByCodeResponse" type="tns:findRoleTypeByCodeResponse"/>
+
+<xs:element name="findRoleTypeById" type="tns:findRoleTypeById"/>
+
+<xs:element name="findRoleTypeByIdResponse" type="tns:findRoleTypeByIdResponse"/>
+
+<xs:element name="findRoleTypeByName" type="tns:findRoleTypeByName"/>
+
+<xs:element name="findRoleTypeByNameResponse" type="tns:findRoleTypeByNameResponse"/>
+
+<xs:element name="findSubset" type="tns:findSubset"/>
+
+<xs:element name="findSubsetById" type="tns:findSubsetById"/>
+
+<xs:element name="findSubsetByIdResponse" type="tns:findSubsetByIdResponse"/>
+
+<xs:element name="findSubsetByName" type="tns:findSubsetByName"/>
+
+<xs:element name="findSubsetByNameResponse" type="tns:findSubsetByNameResponse"/>
+
+<xs:element name="findSubsetPropertyTypeById" type="tns:findSubsetPropertyTypeById"/>
+
+<xs:element name="findSubsetPropertyTypeByIdResponse" type="tns:findSubsetPropertyTypeByIdResponse"/>
+
+<xs:element name="findSubsetPropertyTypeByName" type="tns:findSubsetPropertyTypeByName"/>
+
+<xs:element name="findSubsetPropertyTypeByNameResponse" type="tns:findSubsetPropertyTypeByNameResponse"/>
+
+<xs:element name="findSubsetQualifierTypeById" type="tns:findSubsetQualifierTypeById"/>
+
+<xs:element name="findSubsetQualifierTypeByIdResponse" type="tns:findSubsetQualifierTypeByIdResponse"/>
+
+<xs:element name="findSubsetQualifierTypeByName" type="tns:findSubsetQualifierTypeByName"/>
+
+<xs:element name="findSubsetQualifierTypeByNameResponse" type="tns:findSubsetQualifierTypeByNameResponse"/>
+
+<xs:element name="findSubsetResponse" type="tns:findSubsetResponse"/>
+
+<xs:element name="findSubsetVersionById" type="tns:findSubsetVersionById"/>
+
+<xs:element name="findSubsetVersionByIdResponse" type="tns:findSubsetVersionByIdResponse"/>
+
+<xs:element name="findSubsetVersionByName" type="tns:findSubsetVersionByName"/>
+
+<xs:element name="findSubsetVersionByNameResponse" type="tns:findSubsetVersionByNameResponse"/>
+
+<xs:element name="findTermByCode" type="tns:findTermByCode"/>
+
+<xs:element name="findTermByCodeResponse" type="tns:findTermByCodeResponse"/>
+
+<xs:element name="findTermById" type="tns:findTermById"/>
+
+<xs:element name="findTermByIdResponse" type="tns:findTermByIdResponse"/>
+
+<xs:element name="findTermsByName" type="tns:findTermsByName"/>
+
+<xs:element name="findTermsByNameResponse" type="tns:findTermsByNameResponse"/>
+
+<xs:element name="findTermsWithAssociationQualifierMatching" type="tns:findTermsWithAssociationQualifierMatching"/>
+
+<xs:element name="findTermsWithAssociationQualifierMatchingResponse" type="tns:findTermsWithAssociationQualifierMatchingResponse"/>
+
+<xs:element name="findTermsWithInverseSynonymMatching" type="tns:findTermsWithInverseSynonymMatching"/>
+
+<xs:element name="findTermsWithInverseSynonymMatchingResponse" type="tns:findTermsWithInverseSynonymMatchingResponse"/>
+
+<xs:element name="findTermsWithInverseTermAssociationMatching" type="tns:findTermsWithInverseTermAssociationMatching"/>
+
+<xs:element name="findTermsWithInverseTermAssociationMatchingResponse" type="tns:findTermsWithInverseTermAssociationMatchingResponse"/>
+
+<xs:element name="findTermsWithNameMatching" type="tns:findTermsWithNameMatching"/>
+
+<xs:element name="findTermsWithNameMatchingResponse" type="tns:findTermsWithNameMatchingResponse"/>
+
+<xs:element name="findTermsWithPropertyMatching" type="tns:findTermsWithPropertyMatching"/>
+
+<xs:element name="findTermsWithPropertyMatchingResponse" type="tns:findTermsWithPropertyMatchingResponse"/>
+
+<xs:element name="findTermsWithPropertyQualifierMatching" type="tns:findTermsWithPropertyQualifierMatching"/>
+
+<xs:element name="findTermsWithPropertyQualifierMatchingResponse" type="tns:findTermsWithPropertyQualifierMatchingResponse"/>
+
+<xs:element name="findTermsWithTermAssociationMatching" type="tns:findTermsWithTermAssociationMatching"/>
+
+<xs:element name="findTermsWithTermAssociationMatchingResponse" type="tns:findTermsWithTermAssociationMatchingResponse"/>
+
+<xs:element name="generateAuthorityItemId" type="tns:generateAuthorityItemId"/>
+
+<xs:element name="generateAuthorityItemIdResponse" type="tns:generateAuthorityItemIdResponse"/>
+
+<xs:element name="generateNamespaceItemId" type="tns:generateNamespaceItemId"/>
+
+<xs:element name="generateNamespaceItemIdResponse" type="tns:generateNamespaceItemIdResponse"/>
+
+<xs:element name="generateNextConceptId" type="tns:generateNextConceptId"/>
+
+<xs:element name="generateNextConceptIdResponse" type="tns:generateNextConceptIdResponse"/>
+
+<xs:element name="generateNextTermId" type="tns:generateNextTermId"/>
+
+<xs:element name="generateNextTermIdResponse" type="tns:generateNextTermIdResponse"/>
+
+<xs:element name="generateSubsetItemId" type="tns:generateSubsetItemId"/>
+
+<xs:element name="generateSubsetItemIdResponse" type="tns:generateSubsetItemIdResponse"/>
+
+<xs:element name="getAllKinds" type="tns:getAllKinds"/>
+
+<xs:element name="getAllKindsResponse" type="tns:getAllKindsResponse"/>
+
+<xs:element name="getAllLicenses" type="tns:getAllLicenses"/>
+
+<xs:element name="getAllLicensesResponse" type="tns:getAllLicensesResponse"/>
+
+<xs:element name="getAllNamespaceQualifierTypes" type="tns:getAllNamespaceQualifierTypes"/>
+
+<xs:element name="getAllNamespaceQualifierTypesResponse" type="tns:getAllNamespaceQualifierTypesResponse"/>
+
+<xs:element name="getAllPropertyTypesOfAuthority" type="tns:getAllPropertyTypesOfAuthority"/>
+
+<xs:element name="getAllPropertyTypesOfAuthorityResponse" type="tns:getAllPropertyTypesOfAuthorityResponse"/>
+
+<xs:element name="getAllRoleTypes" type="tns:getAllRoleTypes"/>
+
+<xs:element name="getAllRoleTypesResponse" type="tns:getAllRoleTypesResponse"/>
+
+<xs:element name="getAllSubsetQualifierTypes" type="tns:getAllSubsetQualifierTypes"/>
+
+<xs:element name="getAllSubsetQualifierTypesResponse" type="tns:getAllSubsetQualifierTypesResponse"/>
+
+<xs:element name="getAssociationNavChildContext" type="tns:getAssociationNavChildContext"/>
+
+<xs:element name="getAssociationNavChildContextResponse" type="tns:getAssociationNavChildContextResponse"/>
+
+<xs:element name="getAssociationNavParentContext" type="tns:getAssociationNavParentContext"/>
+
+<xs:element name="getAssociationNavParentContextResponse" type="tns:getAssociationNavParentContextResponse"/>
+
+<xs:element name="getAssociationTypes" type="tns:getAssociationTypes"/>
+
+<xs:element name="getAssociationTypesResponse" type="tns:getAssociationTypesResponse"/>
+
+<xs:element name="getAuthorities" type="tns:getAuthorities"/>
+
+<xs:element name="getAuthoritiesResponse" type="tns:getAuthoritiesResponse"/>
+
+<xs:element name="getAuthorityPropertyQualifierTypes" type="tns:getAuthorityPropertyQualifierTypes"/>
+
+<xs:element name="getAuthorityPropertyQualifierTypesResponse" type="tns:getAuthorityPropertyQualifierTypesResponse"/>
+
+<xs:element name="getAuthorityPropertyTypes" type="tns:getAuthorityPropertyTypes"/>
+
+<xs:element name="getAuthorityPropertyTypesResponse" type="tns:getAuthorityPropertyTypesResponse"/>
+
+<xs:element name="getClassifierHistory" type="tns:getClassifierHistory"/>
+
+<xs:element name="getClassifierHistoryResponse" type="tns:getClassifierHistoryResponse"/>
+
+<xs:element name="getClassifierStatus" type="tns:getClassifierStatus"/>
+
+<xs:element name="getClassifierStatusResponse" type="tns:getClassifierStatusResponse"/>
+
+<xs:element name="getClassifyDetail" type="tns:getClassifyDetail"/>
+
+<xs:element name="getClassifyDetailResponse" type="tns:getClassifyDetailResponse"/>
+
+<xs:element name="getConceptAssociationTypes" type="tns:getConceptAssociationTypes"/>
+
+<xs:element name="getConceptAssociationTypesResponse" type="tns:getConceptAssociationTypesResponse"/>
+
+<xs:element name="getConceptChildRoots" type="tns:getConceptChildRoots"/>
+
+<xs:element name="getConceptChildRootsResponse" type="tns:getConceptChildRootsResponse"/>
+
+<xs:element name="getConceptPropertyQualifierTypes" type="tns:getConceptPropertyQualifierTypes"/>
+
+<xs:element name="getConceptPropertyQualifierTypesResponse" type="tns:getConceptPropertyQualifierTypesResponse"/>
+
+<xs:element name="getConceptPropertyTypes" type="tns:getConceptPropertyTypes"/>
+
+<xs:element name="getConceptPropertyTypesResponse" type="tns:getConceptPropertyTypesResponse"/>
+
+<xs:element name="getExtendingNamespaces" type="tns:getExtendingNamespaces"/>
+
+<xs:element name="getExtendingNamespacesResponse" type="tns:getExtendingNamespacesResponse"/>
+
+<xs:element name="getKinds" type="tns:getKinds"/>
+
+<xs:element name="getKindsResponse" type="tns:getKindsResponse"/>
+
+<xs:element name="getLicense" type="tns:getLicense"/>
+
+<xs:element name="getLicenseResponse" type="tns:getLicenseResponse"/>
+
+<xs:element name="getNamespacePropertyQualifierTypes" type="tns:getNamespacePropertyQualifierTypes"/>
+
+<xs:element name="getNamespacePropertyQualifierTypesResponse" type="tns:getNamespacePropertyQualifierTypesResponse"/>
+
+<xs:element name="getNamespacePropertyTypes" type="tns:getNamespacePropertyTypes"/>
+
+<xs:element name="getNamespacePropertyTypesResponse" type="tns:getNamespacePropertyTypesResponse"/>
+
+<xs:element name="getNamespaces" type="tns:getNamespaces"/>
+
+<xs:element name="getNamespacesResponse" type="tns:getNamespacesResponse"/>
+
+<xs:element name="getNavChildContext" type="tns:getNavChildContext"/>
+
+<xs:element name="getNavChildContextInNamespace" type="tns:getNavChildContextInNamespace"/>
+
+<xs:element name="getNavChildContextInNamespaceResponse" type="tns:getNavChildContextInNamespaceResponse"/>
+
+<xs:element name="getNavChildContextResponse" type="tns:getNavChildContextResponse"/>
+
+<xs:element name="getNavParentContext" type="tns:getNavParentContext"/>
+
+<xs:element name="getNavParentContextInNamespace" type="tns:getNavParentContextInNamespace"/>
+
+<xs:element name="getNavParentContextInNamespaceResponse" type="tns:getNavParentContextInNamespaceResponse"/>
+
+<xs:element name="getNavParentContextResponse" type="tns:getNavParentContextResponse"/>
+
+<xs:element name="getRoleTypes" type="tns:getRoleTypes"/>
+
+<xs:element name="getRoleTypesResponse" type="tns:getRoleTypesResponse"/>
+
+<xs:element name="getSchemaVersion" type="tns:getSchemaVersion"/>
+
+<xs:element name="getSchemaVersionResponse" type="tns:getSchemaVersionResponse"/>
+
+<xs:element name="getServerDatabaseType" type="tns:getServerDatabaseType"/>
+
+<xs:element name="getServerDatabaseTypeResponse" type="tns:getServerDatabaseTypeResponse"/>
+
+<xs:element name="getServerVersion" type="tns:getServerVersion"/>
+
+<xs:element name="getServerVersionResponse" type="tns:getServerVersionResponse"/>
+
+<xs:element name="getSubConcepts" type="tns:getSubConcepts"/>
+
+<xs:element name="getSubConceptsResponse" type="tns:getSubConceptsResponse"/>
+
+<xs:element name="getSubsetConceptChildRoots" type="tns:getSubsetConceptChildRoots"/>
+
+<xs:element name="getSubsetConceptChildRootsResponse" type="tns:getSubsetConceptChildRootsResponse"/>
+
+<xs:element name="getSubsetNavChildContext" type="tns:getSubsetNavChildContext"/>
+
+<xs:element name="getSubsetNavChildContextResponse" type="tns:getSubsetNavChildContextResponse"/>
+
+<xs:element name="getSubsetNavParentContext" type="tns:getSubsetNavParentContext"/>
+
+<xs:element name="getSubsetNavParentContextResponse" type="tns:getSubsetNavParentContextResponse"/>
+
+<xs:element name="getSubsetPropertyQualifierTypes" type="tns:getSubsetPropertyQualifierTypes"/>
+
+<xs:element name="getSubsetPropertyQualifierTypesResponse" type="tns:getSubsetPropertyQualifierTypesResponse"/>
+
+<xs:element name="getSubsetPropertyTypes" type="tns:getSubsetPropertyTypes"/>
+
+<xs:element name="getSubsetPropertyTypesResponse" type="tns:getSubsetPropertyTypesResponse"/>
+
+<xs:element name="getSubsetVersion" type="tns:getSubsetVersion"/>
+
+<xs:element name="getSubsetVersionByTime" type="tns:getSubsetVersionByTime"/>
+
+<xs:element name="getSubsetVersionByTimeResponse" type="tns:getSubsetVersionByTimeResponse"/>
+
+<xs:element name="getSubsetVersionPropertyQualifierTypes" type="tns:getSubsetVersionPropertyQualifierTypes"/>
+
+<xs:element name="getSubsetVersionPropertyQualifierTypesResponse" type="tns:getSubsetVersionPropertyQualifierTypesResponse"/>
+
+<xs:element name="getSubsetVersionPropertyTypes" type="tns:getSubsetVersionPropertyTypes"/>
+
+<xs:element name="getSubsetVersionPropertyTypesResponse" type="tns:getSubsetVersionPropertyTypesResponse"/>
+
+<xs:element name="getSubsetVersionResponse" type="tns:getSubsetVersionResponse"/>
+
+<xs:element name="getSubsetVersions" type="tns:getSubsetVersions"/>
+
+<xs:element name="getSubsetVersionsResponse" type="tns:getSubsetVersionsResponse"/>
+
+<xs:element name="getSynonymTypes" type="tns:getSynonymTypes"/>
+
+<xs:element name="getSynonymTypesResponse" type="tns:getSynonymTypesResponse"/>
+
+<xs:element name="getSystemContextProperty" type="tns:getSystemContextProperty"/>
+
+<xs:element name="getSystemContextPropertyKeys" type="tns:getSystemContextPropertyKeys"/>
+
+<xs:element name="getSystemContextPropertyKeysResponse" type="tns:getSystemContextPropertyKeysResponse"/>
+
+<xs:element name="getSystemContextPropertyResponse" type="tns:getSystemContextPropertyResponse"/>
+
+<xs:element name="getTermAssociationTypes" type="tns:getTermAssociationTypes"/>
+
+<xs:element name="getTermAssociationTypesResponse" type="tns:getTermAssociationTypesResponse"/>
+
+<xs:element name="getTermPropertyQualifierTypes" type="tns:getTermPropertyQualifierTypes"/>
+
+<xs:element name="getTermPropertyQualifierTypesResponse" type="tns:getTermPropertyQualifierTypesResponse"/>
+
+<xs:element name="getTermPropertyTypes" type="tns:getTermPropertyTypes"/>
+
+<xs:element name="getTermPropertyTypesResponse" type="tns:getTermPropertyTypesResponse"/>
+
+<xs:element name="getUserContextProperty" type="tns:getUserContextProperty"/>
+
+<xs:element name="getUserContextPropertyKeys" type="tns:getUserContextPropertyKeys"/>
+
+<xs:element name="getUserContextPropertyKeysResponse" type="tns:getUserContextPropertyKeysResponse"/>
+
+<xs:element name="getUserContextPropertyResponse" type="tns:getUserContextPropertyResponse"/>
+
+<xs:element name="getVersion" type="tns:getVersion"/>
+
+<xs:element name="getVersionByTime" type="tns:getVersionByTime"/>
+
+<xs:element name="getVersionByTimeResponse" type="tns:getVersionByTimeResponse"/>
+
+<xs:element name="getVersionPropertyQualifierTypes" type="tns:getVersionPropertyQualifierTypes"/>
+
+<xs:element name="getVersionPropertyQualifierTypesResponse" type="tns:getVersionPropertyQualifierTypesResponse"/>
+
+<xs:element name="getVersionPropertyTypes" type="tns:getVersionPropertyTypes"/>
+
+<xs:element name="getVersionPropertyTypesResponse" type="tns:getVersionPropertyTypesResponse"/>
+
+<xs:element name="getVersionResponse" type="tns:getVersionResponse"/>
+
+<xs:element name="getVersions" type="tns:getVersions"/>
+
+<xs:element name="getVersionsResponse" type="tns:getVersionsResponse"/>
+
+<xs:element name="hasAdminPermission" type="tns:hasAdminPermission"/>
+
+<xs:element name="hasAdminPermissionResponse" type="tns:hasAdminPermissionResponse"/>
+
+<xs:element name="hasAuthorityPermission" type="tns:hasAuthorityPermission"/>
+
+<xs:element name="hasAuthorityPermissionResponse" type="tns:hasAuthorityPermissionResponse"/>
+
+<xs:element name="hasNamespacePermission" type="tns:hasNamespacePermission"/>
+
+<xs:element name="hasNamespacePermissionResponse" type="tns:hasNamespacePermissionResponse"/>
+
+<xs:element name="hasSubsetPermission" type="tns:hasSubsetPermission"/>
+
+<xs:element name="hasSubsetPermissionResponse" type="tns:hasSubsetPermissionResponse"/>
+
+<xs:element name="isAssociationTypeUsed" type="tns:isAssociationTypeUsed"/>
+
+<xs:element name="isAssociationTypeUsedResponse" type="tns:isAssociationTypeUsedResponse"/>
+
+<xs:element name="isPropertyTypeUsed" type="tns:isPropertyTypeUsed"/>
+
+<xs:element name="isPropertyTypeUsedResponse" type="tns:isPropertyTypeUsedResponse"/>
+
+<xs:element name="isQualifierTypeUsed" type="tns:isQualifierTypeUsed"/>
+
+<xs:element name="isQualifierTypeUsedResponse" type="tns:isQualifierTypeUsedResponse"/>
+
+<xs:element name="isRoleTypeUsed" type="tns:isRoleTypeUsed"/>
+
+<xs:element name="isRoleTypeUsedResponse" type="tns:isRoleTypeUsedResponse"/>
+
+<xs:element name="isSubConcept" type="tns:isSubConcept"/>
+
+<xs:element name="isSubConceptByCode" type="tns:isSubConceptByCode"/>
+
+<xs:element name="isSubConceptByCodeResponse" type="tns:isSubConceptByCodeResponse"/>
+
+<xs:element name="isSubConceptById" type="tns:isSubConceptById"/>
+
+<xs:element name="isSubConceptByIdResponse" type="tns:isSubConceptByIdResponse"/>
+
+<xs:element name="isSubConceptByName" type="tns:isSubConceptByName"/>
+
+<xs:element name="isSubConceptByNameResponse" type="tns:isSubConceptByNameResponse"/>
+
+<xs:element name="isSubConceptOfConcepts" type="tns:isSubConceptOfConcepts"/>
+
+<xs:element name="isSubConceptOfConceptsByName" type="tns:isSubConceptOfConceptsByName"/>
+
+<xs:element name="isSubConceptOfConceptsByNameResponse" type="tns:isSubConceptOfConceptsByNameResponse"/>
+
+<xs:element name="isSubConceptOfConceptsResponse" type="tns:isSubConceptOfConceptsResponse"/>
+
+<xs:element name="isSubConceptResponse" type="tns:isSubConceptResponse"/>
+
+<xs:element name="isWorkingVersion" type="tns:isWorkingVersion"/>
+
+<xs:element name="isWorkingVersionResponse" type="tns:isWorkingVersionResponse"/>
+
+<xs:element name="ping" type="tns:ping"/>
+
+<xs:element name="pingResponse" type="tns:pingResponse"/>
+
+<xs:element name="saveSubsetExpression" type="tns:saveSubsetExpression"/>
+
+<xs:element name="saveSubsetExpressionResponse" type="tns:saveSubsetExpressionResponse"/>
+
+<xs:element name="saveSystemContextProperty" type="tns:saveSystemContextProperty"/>
+
+<xs:element name="saveSystemContextPropertyResponse" type="tns:saveSystemContextPropertyResponse"/>
+
+<xs:element name="saveUserContextProperty" type="tns:saveUserContextProperty"/>
+
+<xs:element name="saveUserContextPropertyResponse" type="tns:saveUserContextPropertyResponse"/>
+
+<xs:element name="syncAuthorityItemId" type="tns:syncAuthorityItemId"/>
+
+<xs:element name="syncAuthorityItemIdResponse" type="tns:syncAuthorityItemIdResponse"/>
+
+<xs:element name="syncNamespaceItemId" type="tns:syncNamespaceItemId"/>
+
+<xs:element name="syncNamespaceItemIdResponse" type="tns:syncNamespaceItemIdResponse"/>
+
+<xs:element name="syncSubsetItemId" type="tns:syncSubsetItemId"/>
+
+<xs:element name="syncSubsetItemIdResponse" type="tns:syncSubsetItemIdResponse"/>
+
+<xs:element name="ungroupRoleGroup" type="tns:ungroupRoleGroup"/>
+
+<xs:element name="ungroupRoleGroupResponse" type="tns:ungroupRoleGroupResponse"/>
+
+<xs:element name="updateAssociationType" type="tns:updateAssociationType"/>
+
+<xs:element name="updateAssociationTypeResponse" type="tns:updateAssociationTypeResponse"/>
+
+<xs:element name="updateAuthority" type="tns:updateAuthority"/>
+
+<xs:element name="updateAuthorityProperty" type="tns:updateAuthorityProperty"/>
+
+<xs:element name="updateAuthorityPropertyResponse" type="tns:updateAuthorityPropertyResponse"/>
+
+<xs:element name="updateAuthorityResponse" type="tns:updateAuthorityResponse"/>
+
+<xs:element name="updateConcept" type="tns:updateConcept"/>
+
+<xs:element name="updateConceptAssociation" type="tns:updateConceptAssociation"/>
+
+<xs:element name="updateConceptAssociationResponse" type="tns:updateConceptAssociationResponse"/>
+
+<xs:element name="updateConceptProperty" type="tns:updateConceptProperty"/>
+
+<xs:element name="updateConceptPropertyResponse" type="tns:updateConceptPropertyResponse"/>
+
+<xs:element name="updateConceptResponse" type="tns:updateConceptResponse"/>
+
+<xs:element name="updateDefiningConcept" type="tns:updateDefiningConcept"/>
+
+<xs:element name="updateDefiningConceptResponse" type="tns:updateDefiningConceptResponse"/>
+
+<xs:element name="updateDefiningRole" type="tns:updateDefiningRole"/>
+
+<xs:element name="updateDefiningRoleResponse" type="tns:updateDefiningRoleResponse"/>
+
+<xs:element name="updateNamespace" type="tns:updateNamespace"/>
+
+<xs:element name="updateNamespaceProperty" type="tns:updateNamespaceProperty"/>
+
+<xs:element name="updateNamespacePropertyResponse" type="tns:updateNamespacePropertyResponse"/>
+
+<xs:element name="updateNamespaceResponse" type="tns:updateNamespaceResponse"/>
+
+<xs:element name="updatePrimitive" type="tns:updatePrimitive"/>
+
+<xs:element name="updatePrimitiveResponse" type="tns:updatePrimitiveResponse"/>
+
+<xs:element name="updatePropertyType" type="tns:updatePropertyType"/>
+
+<xs:element name="updatePropertyTypeResponse" type="tns:updatePropertyTypeResponse"/>
+
+<xs:element name="updateQualifierType" type="tns:updateQualifierType"/>
+
+<xs:element name="updateQualifierTypeResponse" type="tns:updateQualifierTypeResponse"/>
+
+<xs:element name="updateRoleType" type="tns:updateRoleType"/>
+
+<xs:element name="updateRoleTypeResponse" type="tns:updateRoleTypeResponse"/>
+
+<xs:element name="updateSubset" type="tns:updateSubset"/>
+
+<xs:element name="updateSubsetProperty" type="tns:updateSubsetProperty"/>
+
+<xs:element name="updateSubsetPropertyResponse" type="tns:updateSubsetPropertyResponse"/>
+
+<xs:element name="updateSubsetResponse" type="tns:updateSubsetResponse"/>
+
+<xs:element name="updateSubsetVersion" type="tns:updateSubsetVersion"/>
+
+<xs:element name="updateSubsetVersionProperty" type="tns:updateSubsetVersionProperty"/>
+
+<xs:element name="updateSubsetVersionPropertyResponse" type="tns:updateSubsetVersionPropertyResponse"/>
+
+<xs:element name="updateSubsetVersionResponse" type="tns:updateSubsetVersionResponse"/>
+
+<xs:element name="updateSynonym" type="tns:updateSynonym"/>
+
+<xs:element name="updateSynonymResponse" type="tns:updateSynonymResponse"/>
+
+<xs:element name="updateTerm" type="tns:updateTerm"/>
+
+<xs:element name="updateTermAssociation" type="tns:updateTermAssociation"/>
+
+<xs:element name="updateTermAssociationResponse" type="tns:updateTermAssociationResponse"/>
+
+<xs:element name="updateTermProperty" type="tns:updateTermProperty"/>
+
+<xs:element name="updateTermPropertyResponse" type="tns:updateTermPropertyResponse"/>
+
+<xs:element name="updateTermResponse" type="tns:updateTermResponse"/>
+
+<xs:element name="updateVersion" type="tns:updateVersion"/>
+
+<xs:element name="updateVersionProperty" type="tns:updateVersionProperty"/>
+
+<xs:element name="updateVersionPropertyResponse" type="tns:updateVersionPropertyResponse"/>
+
+<xs:element name="updateVersionResponse" type="tns:updateVersionResponse"/>
+
+<xs:complexType name="syncSubsetItemId">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="idKey" type="xs:string" minOccurs="0"/>
+<xs:element name="idValue" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="syncSubsetItemIdResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="deleteConceptProperty">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TConcept" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteConceptPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateSubsetItemId">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="idKey" type="xs:string" minOccurs="0"/>
+<xs:element name="idCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateSubsetItemIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSchemaVersion">
+<xs:sequence>
+<xs:element name="schemaName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSchemaVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersions">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchRightIdentityReferences">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchRightIdentityReferencesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TRoleType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetVersionByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetVersionByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionPropertyQualifierTypes">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionPropertyQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAuthorityProperty">
+<xs:sequence>
+<xs:element name="authority" type="ns1:TAuthority" minOccurs="0"/>
+<xs:element name="oldProp" type="ns1:TProperty" minOccurs="0"/>
+<xs:element name="newProp" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAuthorityPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllKinds">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllKindsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TKind" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPropertyTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPropertyTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isPropertyTypeUsed">
+<xs:sequence>
+<xs:element name="propType" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isPropertyTypeUsedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetConceptChildRoots">
+<xs:sequence>
+<xs:element name="rootConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetConceptChildRootsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TConceptNode" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateNextConceptId">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="idCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateNextConceptIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionPropertyTypes">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionPropertyTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetPropertyQualifierTypes">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetPropertyQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findNamespaceByCode">
+<xs:sequence>
+<xs:element name="namespaceCode" type="xs:string" minOccurs="0"/>
+<xs:element name="attributeSetDescriptor" type="ns1:TContentAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findNamespaceByCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAssociationType">
+<xs:sequence>
+<xs:element name="oldAssocType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="newAssocType" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAssociationTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubConcepts">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="asd" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubConceptsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRoleType">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRoleTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveSubsetExpression">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="expression" type="ns1:TSubsetExpression" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveSubsetExpressionResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSynonymTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSynonymTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetNavChildContext">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetNavChildContextResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavChildContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateDefiningRole">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="deleteRole" type="ns1:TRole" minOccurs="0"/>
+<xs:element name="addRole" type="ns1:TRole" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateDefiningRoleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithSynonymMatching">
+<xs:sequence>
+<xs:element name="synonymType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithSynonymMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateRoleType">
+<xs:sequence>
+<xs:element name="oldRoleType" type="ns1:TRoleType" minOccurs="0"/>
+<xs:element name="newRoleType" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateRoleTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNamespaceRevision">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="comments" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNamespaceRevisionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNamespaceRevision" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetPropertyTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetPropertyTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTerm">
+<xs:sequence>
+<xs:element name="term" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTermResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptByName">
+<xs:sequence>
+<xs:element name="conceptName1" type="xs:string" minOccurs="0"/>
+<xs:element name="conceptName2" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithRoleMatching">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithRoleMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchParentReferences">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchParentReferencesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TRoleType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTermAssociation">
+<xs:sequence>
+<xs:element name="termAssociation" type="ns1:TTermAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTermAssociationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addConceptAssociation">
+<xs:sequence>
+<xs:element name="conceptAssociation" type="ns1:TConceptAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addConceptAssociationResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TConceptAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithPropertyMatching">
+<xs:sequence>
+<xs:element name="propType" type="ns1:TPropertyType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithPropertyMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRoleTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRoleTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSynonym">
+<xs:sequence>
+<xs:element name="synonym" type="ns1:TSynonym" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSynonymResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNamespace">
+<xs:sequence>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNamespaceResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletePropertyType">
+<xs:sequence>
+<xs:element name="propertyType" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletePropertyTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ping">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="pingResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRootConcept">
+<xs:sequence>
+<xs:element name="type" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="rootConcept" type="ns1:TConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRootConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubset">
+<xs:sequence>
+<xs:element name="subset" type="ns1:TSubset" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubsetResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubset" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetVersionById">
+<xs:sequence>
+<xs:element name="versionId" type="xs:int"/>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetVersionByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetConcepts">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="snapshotTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="asd" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetConceptsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSynonym">
+<xs:sequence>
+<xs:element name="oldSynonym" type="ns1:TSynonym" minOccurs="0"/>
+<xs:element name="newSynonym" type="ns1:TSynonym" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSynonymResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLicense">
+<xs:sequence>
+<xs:element name="source" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLicenseResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isRoleTypeUsed">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isRoleTypeUsedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetNamespaces">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetNamespacesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAssociationType">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAssociationTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchVersionById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchVersionByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchConceptSubsets">
+<xs:sequence>
+<xs:element name="conceptId" type="xs:int"/>
+<xs:element name="conceptNamespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchConceptSubsetsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubset" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVersionByName">
+<xs:sequence>
+<xs:element name="versionName" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVersionByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteConcept">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateConcept">
+<xs:sequence>
+<xs:element name="oldConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="newConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPropertyType">
+<xs:sequence>
+<xs:element name="newPropertyType" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPropertyTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAuthorityProperty">
+<xs:sequence>
+<xs:element name="authority" type="ns1:TAuthority" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAuthorityPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVersionProperty">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVersionPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavParentContext">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavParentContextResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavParentContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSystemContextProperty">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+<xs:element name="defaultValue" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSystemContextPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithPropertyQualifierMatching">
+<xs:sequence>
+<xs:element name="propType" type="ns1:TPropertyType" minOccurs="0"/>
+<xs:element name="qualType" type="ns1:TQualifierType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithPropertyQualifierMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubsetVersionProperty">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubsetVersionPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithInverseConceptAssociationMatching">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithInverseConceptAssociationMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TRoleType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRoleTypeWithReferences">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+<xs:element name="removeReferences" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRoleTypeWithReferencesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetQualifierTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetQualifierTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermPropertyQualifierTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermPropertyQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithInverseTermAssociationMatching">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TTermSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithInverseTermAssociationMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isAssociationTypeUsed">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isAssociationTypeUsedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSQL">
+<xs:sequence>
+<xs:element name="sql" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSQLResponse">
+<xs:sequence>
+<xs:element name="return" type="ns2:stringArray" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDefiningConcept">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="definingConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDefiningConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDefiningRole">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="role" type="ns1:TRole" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDefiningRoleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSQLUpdate">
+<xs:sequence>
+<xs:element name="sql" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSQLUpdateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithAssociationQualifierMatching">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="qualType" type="ns1:TQualifierType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+<xs:element name="inverse" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithAssociationQualifierMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetVersionProperty">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetVersionPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetByName">
+<xs:sequence>
+<xs:element name="subsetName" type="xs:string" minOccurs="0"/>
+<xs:element name="asd" type="ns1:TSubsetAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubset" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addConcept">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAssociationNavChildContext">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TConcept" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="associationType" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAssociationNavChildContextResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavChildContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetById">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TSubsetAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubset" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="syncNamespaceItemId">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="idKey" type="xs:string" minOccurs="0"/>
+<xs:element name="idValue" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="syncNamespaceItemIdResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getKinds">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKindsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TKind" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAssociationTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAssociationTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthorityPropertyTypes">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthorityPropertyTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRoleTypeByCode">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRoleTypeByCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetPropertyTypes">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetPropertyTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRoleTypes">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllRoleTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TRoleType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateNextTermId">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="idCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateNextTermIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveSystemContextProperty">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+<xs:element name="value" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveSystemContextPropertyResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateSubsetProperty">
+<xs:sequence>
+<xs:element name="subset" type="ns1:TSubset" minOccurs="0"/>
+<xs:element name="oldProp" type="ns1:TProperty" minOccurs="0"/>
+<xs:element name="newProp" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubsetPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNamespacePropertyTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNamespacePropertyTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllSubsets">
+<xs:sequence>
+<xs:element name="asd" type="ns1:TSubsetAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllSubsetsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubset" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetVersionByName">
+<xs:sequence>
+<xs:element name="versionName" type="xs:string" minOccurs="0"/>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetVersionByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buildSubset">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buildSubsetResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchTermHistory">
+<xs:sequence>
+<xs:element name="termId" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="fromTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="asd" type="ns1:TTermAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchTermHistoryResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptChildRoots">
+<xs:sequence>
+<xs:element name="rootConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptChildRootsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TConceptNode" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermById">
+<xs:sequence>
+<xs:element name="termId" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TTermAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithTermAssociationMatching">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TTermSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithTermAssociationMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClassifierHistory">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getClassifierHistoryResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TClassifierHistory" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTerm">
+<xs:sequence>
+<xs:element name="newTerm" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTermResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchAuthorityById">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchAuthorityByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAuthority" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateQualifierType">
+<xs:sequence>
+<xs:element name="oldQualifierType" type="ns1:TQualifierType" minOccurs="0"/>
+<xs:element name="newQualifierType" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateQualifierTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetVersionById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetVersionByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="filterSubsetConcepts">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="subsetSnapshotTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="concepts" type="ns1:TConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="filterSubsetConceptsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityPropertyTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityPropertyTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionByTime">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="time" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionByTimeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAuthorityByName">
+<xs:sequence>
+<xs:element name="authorityName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAuthorityByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubset">
+<xs:sequence>
+<xs:element name="filter" type="ns1:TDataTypeFilter" minOccurs="0"/>
+<xs:element name="asd" type="ns1:TSubsetAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubset" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateConceptProperty">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TConcept" minOccurs="0"/>
+<xs:element name="oldProp" type="ns1:TProperty" minOccurs="0"/>
+<xs:element name="newProp" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateConceptPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptByCode">
+<xs:sequence>
+<xs:element name="conceptCode" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptByCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithPropertyMatching">
+<xs:sequence>
+<xs:element name="propType" type="ns1:TPropertyType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TTermSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithPropertyMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubset">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptByName">
+<xs:sequence>
+<xs:element name="conceptName" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespaceById">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespaceByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsByName">
+<xs:sequence>
+<xs:element name="termName" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TTermAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addQualifierType">
+<xs:sequence>
+<xs:element name="newQualifierType" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addQualifierTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasAuthorityPermission">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+<xs:element name="permission" type="ns1:TAuthorityPermission" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasAuthorityPermissionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptById">
+<xs:sequence>
+<xs:element name="conceptId" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAssociationType">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAssociationTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isWorkingVersion">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isWorkingVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionPropertyTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionPropertyTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServerVersion">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getServerVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteConceptAssociation">
+<xs:sequence>
+<xs:element name="conceptAssociation" type="ns1:TConceptAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteConceptAssociationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserContextPropertyKeys">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getUserContextPropertyKeysResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityPropertyTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityPropertyTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSystemContextProperty">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSystemContextPropertyResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addConceptProperty">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TConcept" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addConceptPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasAdminPermission">
+<xs:sequence>
+<xs:element name="permission" type="ns1:TAdminPermission" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasAdminPermissionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithAssociationQualifierMatching">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="qualType" type="ns1:TQualifierType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TTermSearchOptions" minOccurs="0"/>
+<xs:element name="inverse" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithAssociationQualifierMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersion">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespaceByCode">
+<xs:sequence>
+<xs:element name="namespaceCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespaceByCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserContextProperty">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserContextPropertyResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateAuthority">
+<xs:sequence>
+<xs:element name="oldAuthority" type="ns1:TAuthority" minOccurs="0"/>
+<xs:element name="newAuthority" type="ns1:TAuthority" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAuthorityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSynonym">
+<xs:sequence>
+<xs:element name="synonym" type="ns1:TSynonym" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSynonymResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateConceptAssociation">
+<xs:sequence>
+<xs:element name="oldConceptAssociation" type="ns1:TConceptAssociation" minOccurs="0"/>
+<xs:element name="newConceptAssociation" type="ns1:TConceptAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateConceptAssociationResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TConceptAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findNamespaceById">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="attributeSetDescriptor" type="ns1:TContentAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findNamespaceByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTermProperty">
+<xs:sequence>
+<xs:element name="term" type="ns1:TTerm" minOccurs="0"/>
+<xs:element name="oldProperty" type="ns1:TProperty" minOccurs="0"/>
+<xs:element name="newProperty" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTermPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchConceptHistory">
+<xs:sequence>
+<xs:element name="conceptId" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="fromTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="asd" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchConceptHistoryResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptPropertyQualifierTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptPropertyQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVersionProperty">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="oldProp" type="ns1:TProperty" minOccurs="0"/>
+<xs:element name="newProp" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVersionPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchVersionByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchVersionByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePrimitive">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="primitive" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePrimitiveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNamespaces">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNamespacesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNamespace" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAuthority">
+<xs:sequence>
+<xs:element name="authority" type="ns1:TAuthority" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAuthorityResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAuthority" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasNamespacePermission">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="permission" type="ns1:TNamespacePermission" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasNamespacePermissionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermByCode">
+<xs:sequence>
+<xs:element name="termCode" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="asd" type="ns1:TTermAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermByCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isQualifierTypeUsed">
+<xs:sequence>
+<xs:element name="type" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isQualifierTypeUsedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClassifyDetail">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClassifyDetailResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TClassifyDetail" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDefiningRole">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="role" type="ns1:TRole" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDefiningRoleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNamespacePropertyQualifierTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNamespacePropertyQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addVersionProperty">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addVersionPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findQualifierTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findQualifierTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRootConcept">
+<xs:sequence>
+<xs:element name="type" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="rootConcept" type="ns1:TConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRootConceptResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getExtendingNamespaces">
+<xs:sequence>
+<xs:element name="subsNamespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getExtendingNamespacesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNamespace" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchAuthorityByName">
+<xs:sequence>
+<xs:element name="authorityName" type="xs:string" minOccurs="0"/>
+<xs:element name="asd" type="ns1:TAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchAuthorityByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAuthority" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAssociationTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptAssociationTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSubsetQualifierTypes">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSubsetQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptOfConcepts">
+<xs:sequence>
+<xs:element name="concept1" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="concepts" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptOfConceptsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersions">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetConceptCount">
+<xs:sequence>
+<xs:element name="subset" type="ns1:TSubset" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetConceptCountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionByTime">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="time" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionByTimeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllNamespaceQualifierTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllNamespaceQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVersionById">
+<xs:sequence>
+<xs:element name="versionId" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVersionByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="classify">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="classifyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TClassifyStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateNamespace">
+<xs:sequence>
+<xs:element name="oldNamespace" type="ns1:TNamespace" minOccurs="0"/>
+<xs:element name="newNamespace" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateNamespaceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTerm">
+<xs:sequence>
+<xs:element name="oldTerm" type="ns1:TTerm" minOccurs="0"/>
+<xs:element name="newTerm" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTermResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateNamespaceItemId">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="idKey" type="xs:string" minOccurs="0"/>
+<xs:element name="idCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateNamespaceItemIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSQLUpdates">
+<xs:sequence>
+<xs:element name="sql" type="xs:string" minOccurs="0"/>
+<xs:element name="sqlItems" type="ns1:SqlItem" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSQLUpdatesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findNamespaceByName">
+<xs:sequence>
+<xs:element name="namespaceName" type="xs:string" minOccurs="0"/>
+<xs:element name="attributeSetDescriptor" type="ns1:TContentAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findNamespaceByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClassifierStatus">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getClassifierStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TClassifierStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubset">
+<xs:sequence>
+<xs:element name="oldSubset" type="ns1:TSubset" minOccurs="0"/>
+<xs:element name="newSubset" type="ns1:TSubset" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubsetResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubset" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNamespaceProperty">
+<xs:sequence>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNamespacePropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespaceByName">
+<xs:sequence>
+<xs:element name="namespaceName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespaceByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateAuthorityItemId">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+<xs:element name="idKey" type="xs:string" minOccurs="0"/>
+<xs:element name="idCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateAuthorityItemIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubsetVersionProperty">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="oldProp" type="ns1:TProperty" minOccurs="0"/>
+<xs:element name="newProp" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubsetVersionPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createSubsetRevision">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="comments" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createSubsetRevisionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TSubsetRevision" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeBatchSQLUpdate">
+<xs:sequence>
+<xs:element name="sqlItems" type="ns1:SqlItem" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeBatchSQLUpdateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateNamespaceProperty">
+<xs:sequence>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+<xs:element name="oldProp" type="ns1:TProperty" minOccurs="0"/>
+<xs:element name="newProp" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateNamespacePropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptByCode">
+<xs:sequence>
+<xs:element name="conceptCode1" type="xs:string" minOccurs="0"/>
+<xs:element name="concept2" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptByCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAssociationNavParentContext">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TConcept" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="associationType" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAssociationNavParentContextResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavParentContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePropertyType">
+<xs:sequence>
+<xs:element name="oldPropertyType" type="ns1:TPropertyType" minOccurs="0"/>
+<xs:element name="newPropertyType" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePropertyTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithNameMatching">
+<xs:sequence>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TTermSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithNameMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAuthorityProperty">
+<xs:sequence>
+<xs:element name="authority" type="ns1:TAuthority" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAuthorityPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespaceProperty">
+<xs:sequence>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteNamespacePropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createRoleGroup">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="roles" type="ns1:TRole" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createRoleGroupResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermAssociationTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermAssociationTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetNavParentContext">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetNavParentContextResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavParentContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithInverseRoleMatching">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithInverseRoleMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRoleTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRoleTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchTermProperties">
+<xs:sequence>
+<xs:element name="term" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchTermPropertiesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetQualifierTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetQualifierTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavChildContext">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavChildContextResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavChildContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetProperty">
+<xs:sequence>
+<xs:element name="subset" type="ns1:TSubset" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubsetPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPropertyTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPropertyTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVersion">
+<xs:sequence>
+<xs:element name="oldVersion" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="newVersion" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityQualifierTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityQualifierTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addVersion">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDefiningConcept">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="definingConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDefiningConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findQualifierTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findQualifierTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveUserContextProperty">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+<xs:element name="value" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveUserContextPropertyResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="executeSQLQuery">
+<xs:sequence>
+<xs:element name="sqlItem" type="ns1:SqlItem" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="executeSQLQueryResponse">
+<xs:sequence>
+<xs:element name="return" type="ns2:stringArray" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteQualifierType">
+<xs:sequence>
+<xs:element name="qualifierType" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteQualifierTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRoleType">
+<xs:sequence>
+<xs:element name="roleType" type="ns1:TRoleType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRoleTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConcept">
+<xs:sequence>
+<xs:element name="concept1" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="concept2" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="syncAuthorityItemId">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+<xs:element name="idKey" type="xs:string" minOccurs="0"/>
+<xs:element name="idValue" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="syncAuthorityItemIdResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithAllSynonymMatching">
+<xs:sequence>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithAllSynonymMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptPropertyTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getConceptPropertyTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAssociationTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAssociationTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetPropertyTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSubsetPropertyTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithConceptAssociationMatching">
+<xs:sequence>
+<xs:element name="assocType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithConceptAssociationMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAssociationTypeByName">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAssociationTypeByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAssociationType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTermAssociation">
+<xs:sequence>
+<xs:element name="newTermAssociation" type="ns1:TTermAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTermAssociationResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTermAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithNameMatching">
+<xs:sequence>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TConceptSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findConceptsWithNameMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TOntylogConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllPropertyTypesOfAuthority">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllPropertyTypesOfAuthorityResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthorityPropertyQualifierTypes">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthorityPropertyQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateDefiningConcept">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="deletedDefiningConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="addedDefiningConcept" type="ns1:TOntylogConcept" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateDefiningConceptResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityQualifierTypeById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAuthorityQualifierTypeByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptById">
+<xs:sequence>
+<xs:element name="conceptId1" type="xs:int"/>
+<xs:element name="conceptId2" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersion">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubsetVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSystemContextPropertyKeys">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSystemContextPropertyKeysResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithPropertyQualifierMatching">
+<xs:sequence>
+<xs:element name="propType" type="ns1:TPropertyType" minOccurs="0"/>
+<xs:element name="qualType" type="ns1:TQualifierType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TTermSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithPropertyQualifierMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubsetVersion">
+<xs:sequence>
+<xs:element name="oldVersion" type="ns1:TContentVersion" minOccurs="0"/>
+<xs:element name="newVersion" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubsetVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTermProperty">
+<xs:sequence>
+<xs:element name="term" type="ns1:TTerm" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteTermPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTermAssociation">
+<xs:sequence>
+<xs:element name="oldTermAssociation" type="ns1:TTermAssociation" minOccurs="0"/>
+<xs:element name="newTermAssociation" type="ns1:TTermAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTermAssociationResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTermAssociation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTermProperty">
+<xs:sequence>
+<xs:element name="term" type="ns1:TTerm" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTermPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptOfConceptsByName">
+<xs:sequence>
+<xs:element name="conceptName" type="xs:string" minOccurs="0"/>
+<xs:element name="concepts" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSubConceptOfConceptsByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasSubsetPermission">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="permission" type="ns1:TSubsetPermission" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasSubsetPermissionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermPropertyTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTermPropertyTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithInverseSynonymMatching">
+<xs:sequence>
+<xs:element name="synonymType" type="ns1:TAssociationType" minOccurs="0"/>
+<xs:element name="pattern" type="xs:string" minOccurs="0"/>
+<xs:element name="options" type="ns1:TTermSearchOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findTermsWithInverseSynonymMatchingResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TTerm" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetPreview">
+<xs:sequence>
+<xs:element name="options" type="ns1:TPreviewOptions" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetchSubsetPreviewResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TConcept" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServerDatabaseType">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getServerDatabaseTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionPropertyQualifierTypes">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersionPropertyQualifierTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthorities">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAuthoritiesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TAuthority" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavParentContextInNamespace">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TConcept" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavParentContextInNamespaceResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavParentContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllLicenses">
+<xs:sequence>
+<xs:element name="condition" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllLicensesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserContextProperty">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+<xs:element name="defaultValue" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserContextPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubsetVersion">
+<xs:sequence>
+<xs:element name="version" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubsetVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TContentVersion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAuthorityById">
+<xs:sequence>
+<xs:element name="authorityId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAuthorityByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubsetProperty">
+<xs:sequence>
+<xs:element name="subset" type="ns1:TSubset" minOccurs="0"/>
+<xs:element name="property" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubsetPropertyResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TProperty" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavChildContextInNamespace">
+<xs:sequence>
+<xs:element name="focusConcept" type="ns1:TConcept" minOccurs="0"/>
+<xs:element name="focusConceptASD" type="ns1:TConceptAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="namespace" type="ns1:TNamespace" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNavChildContextInNamespaceResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:TNavChildContext" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ungroupRoleGroup">
+<xs:sequence>
+<xs:element name="concept" type="ns1:TOntylogConcept" minOccurs="0"/>
+<xs:element name="roleGroupNum" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ungroupRoleGroupResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>

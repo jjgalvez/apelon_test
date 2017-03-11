@@ -1,0 +1,914 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2-b13 (branches/2.2-6964; 2012-01-09T18:04:18+0000) JAXWS-RI/2.2.6-promoted-b20 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://apelon.com/dtsserver/types" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://apelon.com/dtsserver/types">
+
+<xs:element name="TAssociationType" type="tns:TAssociationType"/>
+
+<xs:element name="TAuthority" type="tns:TAuthority"/>
+
+<xs:element name="TNamespace" type="tns:TNamespace"/>
+
+<xs:element name="TOntylogConcept" type="tns:TOntylogConcept"/>
+
+<xs:element name="TPropertyType" type="tns:TPropertyType"/>
+
+<xs:element name="TQualifierType" type="tns:TQualifierType"/>
+
+<xs:element name="TRoleType" type="tns:TRoleType"/>
+
+<xs:element name="TSubset" type="tns:TSubset"/>
+
+<xs:element name="TTerm" type="tns:TTerm"/>
+
+<xs:complexType name="TConcept">
+<xs:complexContent>
+<xs:extension base="tns:TConceptItem">
+<xs:sequence>
+<xs:element name="properties" type="tns:TProperty" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="associations" type="tns:TConceptAssociation" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="inverseAssociations" type="tns:TConceptAssociation" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="synonyms" type="tns:TSynonym" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TConceptItem">
+<xs:complexContent>
+<xs:extension base="tns:TObject">
+<xs:sequence>
+<xs:element name="status" type="tns:TItemStatus"/>
+<xs:element name="snapshotDate" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TObject">
+<xs:complexContent>
+<xs:extension base="tns:TBasicObject">
+<xs:sequence>
+<xs:element name="code" type="xs:string"/>
+<xs:element name="revisionIn" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="revisionOut" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TBasicObject">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TProperty">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int" minOccurs="0"/>
+<xs:element name="propertyType" type="tns:TPropertyType"/>
+<xs:element name="value" type="xs:string"/>
+<xs:element name="revisionIn" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="revisionOut" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="qualifiers" type="tns:TQualifier" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TPropertyType">
+<xs:complexContent>
+<xs:extension base="tns:TValidatedItem">
+<xs:sequence>
+<xs:element name="attachesTo" type="tns:TModifiesItemType" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TValidatedItem">
+<xs:complexContent>
+<xs:extension base="tns:TObject">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TValidator">
+<xs:complexContent>
+<xs:extension base="tns:TBasicObject">
+<xs:sequence>
+<xs:element name="validatorMethod" type="tns:TValidatorMethod"/>
+<xs:element name="permittedValue" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="regex" type="xs:string"/>
+<xs:element name="toolTipText" type="xs:string"/>
+<xs:element name="errorMessage" type="xs:string"/>
+</xs:sequence>
+<xs:attribute name="ALL_NAMESPACES" type="xs:int" use="required"/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TKind">
+<xs:complexContent>
+<xs:extension base="tns:TObject">
+<xs:sequence>
+<xs:element name="reference" type="xs:boolean"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TPropertiedObject" abstract="true">
+<xs:complexContent>
+<xs:extension base="tns:TObject">
+<xs:sequence>
+<xs:element name="properties" type="tns:TProperty" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TRoleType">
+<xs:complexContent>
+<xs:extension base="tns:TObject">
+<xs:sequence>
+<xs:element name="domainKind" type="tns:TKind" minOccurs="0"/>
+<xs:element name="rangeKind" type="tns:TKind" minOccurs="0"/>
+<xs:element name="rightIdentity" type="tns:TObject" minOccurs="0"/>
+<xs:element name="parentRoleType" type="tns:TObject" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TTermItem">
+<xs:complexContent>
+<xs:extension base="tns:TObject">
+<xs:sequence>
+<xs:element name="status" type="tns:TItemStatus"/>
+<xs:element name="snapshotDate" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TTerm">
+<xs:complexContent>
+<xs:extension base="tns:TTermItem">
+<xs:sequence>
+<xs:element name="properties" type="tns:TProperty" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="associations" type="tns:TTermAssociation" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="inverseAssociations" type="tns:TTermAssociation" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="synonyms" type="tns:TSynonym" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TTermAssociation">
+<xs:complexContent>
+<xs:extension base="tns:TAssociation">
+<xs:sequence>
+<xs:element name="fromTerm" type="tns:TTermItem" minOccurs="0"/>
+<xs:element name="toTerm" type="tns:TTermItem" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TAssociation" abstract="true">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="associationType" type="tns:TAssociationType" minOccurs="0"/>
+<xs:element name="value" type="tns:TObject" minOccurs="0"/>
+<xs:element name="revisionIn" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="revisionOut" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="qualifiers" type="tns:TQualifier" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TAssociationType">
+<xs:complexContent>
+<xs:extension base="tns:TObject">
+<xs:sequence>
+<xs:element name="inverseName" type="xs:string" minOccurs="0"/>
+<xs:element name="itemsConnected" type="tns:TItemsConnected" minOccurs="0"/>
+<xs:element name="purpose" type="tns:TPurpose" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TQualifier">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int" minOccurs="0"/>
+<xs:element name="qualifierType" type="tns:TQualifierType"/>
+<xs:element name="value" type="xs:string"/>
+<xs:element name="revisionIn" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="revisionOut" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TQualifierType">
+<xs:complexContent>
+<xs:extension base="tns:TValidatedItem">
+<xs:sequence>
+<xs:element name="qualifies" type="tns:TQualifiesItemType" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TConceptAssociation">
+<xs:complexContent>
+<xs:extension base="tns:TAssociation">
+<xs:sequence>
+<xs:element name="fromConcept" type="tns:TConceptItem" minOccurs="0"/>
+<xs:element name="toConcept" type="tns:TConceptItem" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TSynonym">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="concept" type="tns:TConceptItem" minOccurs="0"/>
+<xs:element name="associationType" type="tns:TAssociationType" minOccurs="0"/>
+<xs:element name="term" type="tns:TTermItem" minOccurs="0"/>
+<xs:element name="preferred" type="xs:boolean"/>
+<xs:element name="localAddition" type="xs:boolean"/>
+<xs:element name="revisionIn" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="revisionOut" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TConceptWithProperties">
+<xs:complexContent>
+<xs:extension base="tns:TConcept">
+<xs:sequence>
+<xs:element name="synonym" type="xs:string" minOccurs="0"/>
+<xs:element name="preferredName" type="xs:string" minOccurs="0"/>
+<xs:element name="codeInSource" type="xs:string" minOccurs="0"/>
+<xs:element name="longName" type="xs:string" minOccurs="0"/>
+<xs:element name="longCommonName" type="xs:string" minOccurs="0"/>
+<xs:element name="shortName" type="xs:string" minOccurs="0"/>
+<xs:element name="reportable" type="xs:string" minOccurs="0"/>
+<xs:element name="hierarchicalName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TOntylogConcept">
+<xs:complexContent>
+<xs:extension base="tns:TConcept">
+<xs:sequence>
+<xs:element name="kind" type="tns:TKind" minOccurs="0"/>
+<xs:element name="primitive" type="xs:boolean"/>
+<xs:element name="subconcepts" type="tns:TConceptNav" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="superconcepts" type="tns:TConceptNav" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="roles" type="tns:TRole" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="inverseRoles" type="tns:TRole" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="definingConcepts" type="tns:TConceptNav" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="inverseDefiningConcepts" type="tns:TConceptNav" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="definingRoles" type="tns:TRole" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="numberOfSpecifiedSubconcepts" type="xs:int"/>
+<xs:element name="numberOfSpecifiedSuperconcepts" type="xs:int"/>
+<xs:element name="numberOfSpecifiedInverseRoles" type="xs:int"/>
+<xs:element name="numberOfSpecifiedRoles" type="xs:int"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TConceptNav">
+<xs:sequence>
+<xs:element name="concept" type="tns:TOntylogConcept" minOccurs="0"/>
+<xs:element name="revisionIn" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="revisionOut" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TConceptNode">
+<xs:complexContent>
+<xs:extension base="tns:TConceptNav">
+<xs:sequence>
+<xs:element name="parentCount" type="xs:int"/>
+<xs:element name="childCount" type="xs:int"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TRole">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="namespaceId" type="xs:int" minOccurs="0"/>
+<xs:element name="roleModifier" type="tns:TRoleModifier"/>
+<xs:element name="roleType" type="tns:TRoleType"/>
+<xs:element name="valueConcept" type="tns:TOntylogConcept"/>
+<xs:element name="groupNum" type="xs:int" minOccurs="0"/>
+<xs:element name="revisionIn" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="revisionOut" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TContentVersion">
+<xs:sequence>
+<xs:element name="contentId" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="revisionDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="releaseDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="attachesTo" type="tns:TContentType" minOccurs="0"/>
+<xs:element name="properties" type="tns:TProperty" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TAttributeSetDescriptor">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="snapshotDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="attributesLimit" type="xs:int" default="100"/>
+<xs:element name="allPropertyTypes" type="xs:boolean" default="false"/>
+<xs:element name="propertyTypes" type="tns:TPropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+<xs:attribute name="DEFAULT_LIMIT" type="xs:int" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="TTermAttributeSetDescriptor">
+<xs:complexContent>
+<xs:extension base="tns:TAttributeSetDescriptor">
+<xs:sequence>
+<xs:element name="allAssociationTypes" type="xs:boolean" default="false"/>
+<xs:element name="associationTypes" type="tns:TAssociationType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="allInverseAssociationTypes" type="xs:boolean" default="false"/>
+<xs:element name="inverseAssociationTypes" type="tns:TAssociationType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="allSynonymTypes" type="xs:boolean" default="false"/>
+<xs:element name="synonymTypes" type="tns:TAssociationType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TConceptAttributeSetDescriptor">
+<xs:complexContent>
+<xs:extension base="tns:TTermAttributeSetDescriptor">
+<xs:sequence>
+<xs:element name="allRoleTypes" type="xs:boolean" default="false"/>
+<xs:element name="roleTypes" type="tns:TRoleType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="allInverseRoleTypes" type="xs:boolean" default="false"/>
+<xs:element name="inverseRoleTypes" type="tns:TRoleType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="definedViewAttributes" type="xs:boolean" default="false"/>
+<xs:element name="queryHasSubs" type="xs:boolean" default="false"/>
+<xs:element name="queryHasSups" type="xs:boolean" default="false"/>
+<xs:element name="subconcepts" type="xs:boolean" default="false"/>
+<xs:element name="superconcepts" type="xs:boolean" default="false"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TContentAttributeSetDescriptor">
+<xs:complexContent>
+<xs:extension base="tns:TAttributeSetDescriptor">
+<xs:sequence>
+<xs:element name="versions" type="xs:boolean"/>
+<xs:element name="versionAttributeSetDescriptor" type="tns:TAttributeSetDescriptor" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TSubsetAttributeSetDescriptor">
+<xs:complexContent>
+<xs:extension base="tns:TContentAttributeSetDescriptor">
+<xs:sequence>
+<xs:element name="fetchExpression" type="xs:boolean"/>
+<xs:element name="fetchConceptCount" type="xs:boolean"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TAuthority">
+<xs:complexContent>
+<xs:extension base="tns:TContent">
+<xs:sequence>
+<xs:element name="description" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TContent">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="properties" type="tns:TProperty" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TVersionedContent">
+<xs:complexContent>
+<xs:extension base="tns:TContent">
+<xs:sequence>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="authority" type="tns:TAuthority"/>
+<xs:element name="writable" type="xs:boolean"/>
+<xs:element name="contentVersion" type="tns:TContentVersion" minOccurs="0"/>
+<xs:element name="contentVersions" type="tns:TContentVersion" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TSubset">
+<xs:complexContent>
+<xs:extension base="tns:TVersionedContent">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="xml" type="xs:string" minOccurs="0"/>
+<xs:element name="expression" type="tns:TSubsetExpression"/>
+<xs:element name="conceptCount" type="xs:int"/>
+<xs:element name="buildTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="createdBy" type="xs:string" minOccurs="0"/>
+<xs:element name="createdTime" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="modifiedBy" type="xs:string" minOccurs="0"/>
+<xs:element name="modifiedTime" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TSubsetExpression">
+<xs:sequence>
+<xs:element name="namespaceFilters" type="tns:SENamespaceFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="subsetFilters" type="tns:SESubsetFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="sql" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SENamespaceFilter">
+<xs:complexContent>
+<xs:extension base="tns:SESearchFilter">
+<xs:sequence>
+<xs:element name="snapshotDate" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+<xs:attribute name="ALL_NAMESPACE" type="xs:int" use="required"/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="SESearchFilter" abstract="true">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="namespaceName" type="xs:string" minOccurs="0"/>
+<xs:element name="concepts" type="tns:SEConcept" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="conceptFilters" type="tns:SEConceptFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="attributeFilters" type="tns:SEAttributeFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="subsetFilters" type="tns:SESubsetFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="excludeFilter" type="tns:SEExcludeFilter" minOccurs="0"/>
+<xs:element name="status" type="tns:TItemStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SEConcept">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="namespaceName" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SEConceptFilter">
+<xs:complexContent>
+<xs:extension base="tns:SESearchFilter">
+<xs:sequence>
+<xs:element name="modifier" type="tns:SEConceptFilterModifier"/>
+<xs:element name="concept" type="tns:SEConcept"/>
+<xs:element name="isWorkingVersion" type="xs:boolean"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="SEAttributeFilter">
+<xs:complexContent>
+<xs:extension base="tns:SESearchFilter">
+<xs:sequence>
+<xs:element name="attribute" type="tns:SESearchAttribute"/>
+<xs:element name="type" type="tns:SEKbType"/>
+<xs:element name="operator" type="tns:SEFilterOperator"/>
+<xs:element name="value" type="xs:string" minOccurs="0"/>
+<xs:element name="valueNamespaceId" type="xs:int" minOccurs="0"/>
+<xs:element name="valueNamespaceName" type="xs:string" minOccurs="0"/>
+<xs:element name="valueStatus" type="tns:TItemStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="SEKbType">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="namespaceName" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SESubsetFilter">
+<xs:complexContent>
+<xs:extension base="tns:SESearchFilter">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="subsetName" type="xs:string" minOccurs="0"/>
+<xs:element name="snapshotDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="rebuild" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="SEExcludeFilter">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="namespaceName" type="xs:string" minOccurs="0"/>
+<xs:element name="concepts" type="tns:SEConcept" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="conceptFilters" type="tns:SEConceptExcludeFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="attributeFilters" type="tns:SEAttributeExcludeFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="subsetFilters" type="tns:SESubsetExcludeFilter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="status" type="tns:TItemStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SEConceptExcludeFilter">
+<xs:complexContent>
+<xs:extension base="tns:SEExcludeFilter">
+<xs:sequence>
+<xs:element name="modifier" type="tns:SEConceptFilterModifier"/>
+<xs:element name="concept" type="tns:SEConcept"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="SEAttributeExcludeFilter">
+<xs:complexContent>
+<xs:extension base="tns:SEExcludeFilter">
+<xs:sequence>
+<xs:element name="attribute" type="tns:SESearchAttribute"/>
+<xs:element name="type" type="tns:SEKbType"/>
+<xs:element name="operator" type="tns:SEFilterOperator"/>
+<xs:element name="value" type="xs:string" minOccurs="0"/>
+<xs:element name="valueNamespaceId" type="xs:int" minOccurs="0"/>
+<xs:element name="valueNamespaceName" type="xs:string" minOccurs="0"/>
+<xs:element name="valueStatus" type="tns:TItemStatus" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="SESubsetExcludeFilter">
+<xs:complexContent>
+<xs:extension base="tns:SEExcludeFilter">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="subsetName" type="xs:string" minOccurs="0"/>
+<xs:element name="snapshotDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="rebuild" type="xs:boolean"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TNamespace">
+<xs:complexContent>
+<xs:extension base="tns:TVersionedContent">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0"/>
+<xs:element name="local" type="xs:boolean"/>
+<xs:element name="namespaceType" type="tns:TNamespaceType" minOccurs="0"/>
+<xs:element name="linkedNamespaceId" type="xs:int"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TNavChildContext">
+<xs:sequence>
+<xs:element name="focus" type="tns:TOntylogConcept" minOccurs="0"/>
+<xs:element name="children" type="tns:TConceptNode" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TConceptSearchOptions">
+<xs:sequence>
+<xs:element name="attributeSetDescriptor" type="tns:TConceptAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="snapshotDate" type="xs:dateTime"/>
+<xs:element name="firstResult" type="xs:int"/>
+<xs:element name="limit" type="xs:int"/>
+<xs:element name="subsetSearch" type="xs:boolean"/>
+<xs:element name="contentId" type="xs:int"/>
+<xs:element name="status" type="tns:TItemStatus"/>
+</xs:sequence>
+<xs:attribute name="ALL_CONTENT" type="xs:int" use="required"/>
+<xs:attribute name="DEFAULT_LIMIT" type="xs:int" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="TNamespaceRevision">
+<xs:complexContent>
+<xs:extension base="tns:TContentRevision">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TContentRevision">
+<xs:sequence>
+<xs:element name="contentType" type="tns:TContentType"/>
+<xs:element name="contentId" type="xs:int"/>
+<xs:element name="revision" type="xs:dateTime"/>
+<xs:element name="user" type="xs:string"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TSubsetRevision">
+<xs:complexContent>
+<xs:extension base="tns:TContentRevision">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="TNavParentContext">
+<xs:sequence>
+<xs:element name="focus" type="tns:TOntylogConcept" minOccurs="0"/>
+<xs:element name="parents" type="tns:TConceptNode" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TTermSearchOptions">
+<xs:sequence>
+<xs:element name="attributeSetDescriptor" type="tns:TTermAttributeSetDescriptor" minOccurs="0"/>
+<xs:element name="snapshotDate" type="xs:dateTime"/>
+<xs:element name="firstResult" type="xs:int"/>
+<xs:element name="limit" type="xs:int"/>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="status" type="tns:TItemStatus"/>
+</xs:sequence>
+<xs:attribute name="ALL_NAMESPACES" type="xs:int" use="required"/>
+<xs:attribute name="DEFAULT_LIMIT" type="xs:int" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="TClassifierHistory">
+<xs:sequence>
+<xs:element name="classifierResult" type="tns:TClassifierResult" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TClassifierResult">
+<xs:sequence>
+<xs:element name="namespaceId" type="xs:int"/>
+<xs:element name="namespaceName" type="xs:string"/>
+<xs:element name="success" type="xs:boolean"/>
+<xs:element name="timeRequested" type="xs:string"/>
+<xs:element name="timeStarted" type="xs:string"/>
+<xs:element name="timeFinished" type="xs:string"/>
+<xs:element name="elapsedTime" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TDataTypeFilter">
+<xs:sequence>
+<xs:element name="filterBy" type="xs:string" minOccurs="0"/>
+<xs:element name="namePattern" type="xs:string" minOccurs="0"/>
+<xs:element name="contentId" type="xs:int"/>
+<xs:element name="snapshotDate" type="xs:dateTime"/>
+</xs:sequence>
+<xs:attribute name="ALL_CONTENT" type="xs:int" use="required"/>
+<xs:attribute name="FILTER_BY_SUBSET" type="xs:string"/>
+<xs:attribute name="FILTER_BY_NAMESPACE" type="xs:string"/>
+<xs:attribute name="FILTER_BY_NAME_MATCHING" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="TClassifyDetail">
+<xs:sequence>
+<xs:element name="classifiedLastAt" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="classifyRequired" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SqlItem">
+<xs:sequence>
+<xs:element name="sql" type="xs:string"/>
+<xs:element name="parameters" type="tns:SqlParameter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SqlParameter">
+<xs:sequence>
+<xs:element name="parameter" type="xs:string"/>
+<xs:element name="value" type="xs:string"/>
+<xs:element name="type" type="tns:SqlParameterType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TClassifierStatus">
+<xs:sequence>
+<xs:element name="active" type="xs:boolean"/>
+<xs:element name="currentNamespaceName" type="xs:string"/>
+<xs:element name="currentOperation" type="xs:string"/>
+<xs:element name="operationProgress" type="xs:int"/>
+<xs:element name="overallProgress" type="xs:int"/>
+<xs:element name="queueSize" type="xs:int"/>
+<xs:element name="queuedNamespaceName" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TPreviewOptions">
+<xs:sequence>
+<xs:element name="subsetId" type="xs:int"/>
+<xs:element name="limit" type="xs:int"/>
+<xs:element name="previewType" type="xs:int"/>
+<xs:element name="subsetExpression" type="tns:TSubsetExpression"/>
+</xs:sequence>
+<xs:attribute name="DIFF_ADDITIONS" type="xs:int" use="required"/>
+<xs:attribute name="DIFF_DELETIONS" type="xs:int" use="required"/>
+<xs:attribute name="FULL" type="xs:int" use="required"/>
+</xs:complexType>
+
+<xs:simpleType name="TModifiesItemType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="C"/>
+<xs:enumeration value="T"/>
+<xs:enumeration value="N"/>
+<xs:enumeration value="V"/>
+<xs:enumeration value="A"/>
+<xs:enumeration value="S"/>
+<xs:enumeration value="E"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TValidatorMethod">
+<xs:restriction base="xs:string">
+<xs:enumeration value="L"/>
+<xs:enumeration value="R"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TItemStatus">
+<xs:restriction base="xs:string">
+<xs:enumeration value="A"/>
+<xs:enumeration value="I"/>
+<xs:enumeration value="D"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TItemsConnected">
+<xs:restriction base="xs:string">
+<xs:enumeration value="C"/>
+<xs:enumeration value="S"/>
+<xs:enumeration value="T"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TPurpose">
+<xs:restriction base="xs:string">
+<xs:enumeration value="A"/>
+<xs:enumeration value="M"/>
+<xs:enumeration value="H"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TQualifiesItemType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="CA"/>
+<xs:enumeration value="TA"/>
+<xs:enumeration value="CP"/>
+<xs:enumeration value="TP"/>
+<xs:enumeration value="NP"/>
+<xs:enumeration value="VP"/>
+<xs:enumeration value="AP"/>
+<xs:enumeration value="SP"/>
+<xs:enumeration value="EP"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TRoleModifier">
+<xs:restriction base="xs:string">
+<xs:enumeration value="1"/>
+<xs:enumeration value="2"/>
+<xs:enumeration value="3"/>
+<xs:enumeration value="4"/>
+<xs:enumeration value="5"/>
+<xs:enumeration value="6"/>
+<xs:enumeration value="7"/>
+<xs:enumeration value="8"/>
+<xs:enumeration value="9"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TContentType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="N"/>
+<xs:enumeration value="S"/>
+<xs:enumeration value="A"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="SEConceptFilterModifier">
+<xs:restriction base="xs:string">
+<xs:enumeration value="ALL"/>
+<xs:enumeration value="ONLY_DESCENDANTS_OF"/>
+<xs:enumeration value="ONLY_CHILD_OF"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="SESearchAttribute">
+<xs:restriction base="xs:string">
+<xs:enumeration value="CONCEPT_NAME"/>
+<xs:enumeration value="CONCEPT_NAME_OR_SYNONYM"/>
+<xs:enumeration value="ASSOCIATION"/>
+<xs:enumeration value="PROPERTY"/>
+<xs:enumeration value="SYNONYM"/>
+<xs:enumeration value="KIND"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="SEFilterOperator">
+<xs:restriction base="xs:string">
+<xs:enumeration value="MATCHES"/>
+<xs:enumeration value="NONE"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TNamespaceType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="O"/>
+<xs:enumeration value="T"/>
+<xs:enumeration value="C"/>
+<xs:enumeration value="E"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TAuthorityPermission">
+<xs:restriction base="xs:string">
+<xs:enumeration value="R"/>
+<xs:enumeration value="M"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TAdminPermission">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NA"/>
+<xs:enumeration value="SA"/>
+<xs:enumeration value="AA"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TNamespacePermission">
+<xs:restriction base="xs:string">
+<xs:enumeration value="R"/>
+<xs:enumeration value="W"/>
+<xs:enumeration value="M"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TClassifyStatus">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SUCCESS"/>
+<xs:enumeration value="ALREADY_QUEUED"/>
+<xs:enumeration value="CLASSIFY_NOT_REQUIRED"/>
+<xs:enumeration value="MISSING_KIND_ERROR"/>
+<xs:enumeration value="MISSING_DEFINING_CONCEPT_ERROR"/>
+<xs:enumeration value="CYCLE_ERROR"/>
+<xs:enumeration value="EQ_ERROR"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="SqlParameterType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="STRING"/>
+<xs:enumeration value="INT"/>
+<xs:enumeration value="LONG"/>
+<xs:enumeration value="DATE"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="TSubsetPermission">
+<xs:restriction base="xs:string">
+<xs:enumeration value="R"/>
+<xs:enumeration value="W"/>
+<xs:enumeration value="M"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
